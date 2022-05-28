@@ -40,7 +40,7 @@ def convert(message: telebot.types.Message):
         bot.reply_to(message, f'Не удалось обработать комманду\n{e}')
     else:
         text = f'Цена {amount} {quote} в {base} - {float(total_base)*float(amount)}'
-    bot.send_message(message.chat.id, text)
+        bot.send_message(message.chat.id, text)
 
 
 bot.polling(non_stop=True)
